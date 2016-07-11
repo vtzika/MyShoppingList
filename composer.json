@@ -1,0 +1,10 @@
+{
+    "name": "vtzika/my-shopping-list",
+    "description": "my shopping list",
+    "autoload": {
+        "psr-4": {"": "src/"}
+    },
+    "require": {
+        "silex/silex": "^2.0"
+    }
+}
