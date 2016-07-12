@@ -10,7 +10,6 @@
 
 		function configRoute ($routeProvider) {
 	    	$routeProvider.when('/products', {
-	        	templateUrl: 'products.html',
 	        	controller: 'ProductsController'
 	    	}).
 	    	otherwise({
