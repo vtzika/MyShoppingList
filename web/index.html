@@ -14,6 +14,8 @@
 	<script src="app.js"></script> 
 	<script src="products/products-controller.js"></script> 
 	<script src="products/products-service.js"></script> 
+	<script src="cart/cart-service.js"></script> 
+
 
 </head>
 <body ng-app="MyShoppingList">
@@ -31,7 +33,7 @@
 				 	</md-input-container>	
 				 </div>
 				 <div layout="column" flex="20">
-				 <mb-button ng-click="productsCtrl.addToCart(product.id, quantity)" type="submit"> Add to Cart </div>
+				 <mb-button ng-click="productsCtrl.addToCart(product)" type="submit"> Add to Cart </div>
 			</div>
 		<md-card>
 	</div>
