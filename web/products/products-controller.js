@@ -6,6 +6,10 @@
 
 	function ProductsController(ProductsService){
 		var self = this;
-		return ProductsService.getProducts();
+		self.quantities = [1, 2, 3];
+
+		ProductsService.getProducts().then(function(products){
+			self.products = products.data;
+		})
 	};
 })();
