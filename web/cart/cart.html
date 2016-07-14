@@ -1,3 +1,4 @@
+<h1>Your shopping cart</h1>
 <div ng-controller="CartController as cartCtrl">
 	<md-card  layout-align="space-around"  ng-repeat="product in cartCtrl.products track by $index">
 		<div layout="row">
@@ -11,7 +12,39 @@
 			 		<md-option ng-repeat="quantity in cartCtrl.quantities" value="{{quantity}}">{{quantity}}</md-option>
 			 	</md-input-container>	
 			 </div>
-			 <div layout="column" flex="20">
 		</div>
-	<md-card>
+	</md-card>
+</div>
+
+<md-button ng-click="cartCtrl.checkout()" class="md-raised md-primary">Checkout</md-button>
+
+
+<div>
+	<md-card  layout-align="space-around">
+		<div layout="row">
+			 <div layout="column" flex="50">
+				 <md-input-container md-no-float>
+				 	<label>Discount</label>
+					  <input placeholder="code" type="text">
+				</md-input-container>
+			 </div>
+			 <div layout="column" flex="50">
+			 	<md-button ng-click="redeem" class="md-raised">Redeem</md-button>
+			 </div>
+		</div>
+	</md-card>
+
+	<md-card  layout-align="space-around">
+		<div layout="row">
+			 <div layout="column" flex="20">
+				 <md-input-container md-no-float>
+				 	<label>Adress</label>
+					  <input placeholder="address" type="text">
+				</md-input-container>
+			 </div>
+			 <div layout="column" flex="50">
+			 	<md-button ng-click="setAddress" class="submit">Submit</md-button>
+			 </div>
+		</div>
+	</md-card>
 </div>

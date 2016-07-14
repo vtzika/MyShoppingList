@@ -8,7 +8,8 @@
 		var self = this;
 		return {
 			addToCart: addToCart,
-			getProductsForCart: getProductsForCart
+			getProductsForCart: getProductsForCart,
+			checkout: checkout
 		};
 
 		function addToCart(product){
@@ -23,6 +24,10 @@
 		function getProductsForCart(cartId){
 			var url = "api/carts/" + cartId;
 			return $http.get(url);
+		}
+
+		function checkout(products){
+			return 200;
 		}
 	};
 })();

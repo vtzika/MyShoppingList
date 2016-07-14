@@ -5,11 +5,17 @@
 	CartController.$inject = ['CartService'];
 
 	function CartController(CartService){
-		var cartId = 1;
 		var self = this;
+		var checkout = checkout;
 		
 		CartService.getProductsForCart(1).then(function(products){
 			self.products = products.data;
 		})
+
+		function checkout(){
+			CartService.checkout(self.products).then(function(status){
+				self.checkoutStatus = status;
+			})
+		}
 	};
 })();
