@@ -1,0 +1,17 @@
+<div ng-controller="CartController as cartCtrl">
+	<md-card  layout-align="space-around"  ng-repeat="product in cartCtrl.products track by $index">
+		<div layout="row">
+			 <div layout="column" flex="15">{{product.id}}</div>
+			 <div layout="column" flex="15">{{product.description}}</div>
+			 <div layout="column" flex="15">{{product.price}}</div>
+			 <div layout="column" flex="20">
+			 	<md-input-container>
+			 		<label>Quantity</label>
+			 		<md-select ng-model="product.quantity">
+			 		<md-option ng-repeat="quantity in cartCtrl.quantities" value="{{quantity}}">{{quantity}}</md-option>
+			 	</md-input-container>	
+			 </div>
+			 <div layout="column" flex="20">
+		</div>
+	<md-card>
+</div>

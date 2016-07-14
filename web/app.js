@@ -3,17 +3,22 @@
 		.module( 'MyShoppingList', [ 
 			'ngRoute', 
 			'ngMaterial'
-			])
+		])
 		.config(configRoute);
 
 		configRoute.$inject = ['$routeProvider'];
 
-		function configRoute ($routeProvider) {
+		function configRoute($routeProvider) {
 	    	$routeProvider.when('/products', {
+	        	templateUrl: '/products/products.html',
 	        	controller: 'ProductsController'
-	    	}).
-	    	otherwise({
-	        	redirectTo: '/products'
-	    	});
+	    	})
+	    	.when('/cart', {
+	        	templateUrl: '/cart/cart.html',
+	        	controller: 'CartController'
+	    	})
+	    	.otherwise({
+                redirectTo: '/products'
+            });
 		}
 })();

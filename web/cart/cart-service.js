@@ -7,8 +7,8 @@
 	function CartService($http){
 		var self = this;
 		return {
-			addToCart: addToCart
-
+			addToCart: addToCart,
+			getProductsForCart: getProductsForCart
 		};
 
 		function addToCart(product){
@@ -19,5 +19,10 @@
 			}
 			return $http.post(url, body);
 		};
+
+		function getProductsForCart(cartId){
+			var url = "api/carts/" + cartId;
+			return $http.get(url);
+		}
 	};
 })();

@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+<html ng-app="MyShoppingList">
+	<head>
+	 	<meta charset="UTF-8">
+	    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+	    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
 
-	<script src="/node_modules/angular/angular.js"></script> 
-	<script src="/node_modules/angular-aria/angular-aria.js"></script> 
-	<script src="/node_modules/angular-animate/angular-animate.js"></script> 
-	<script src="/node_modules/angular-material/angular-material.js"></script> 
-	<script src="/node_modules/angular-route/angular-route.js"></script> 
-
-
-	<script src="app.js"></script> 
-	<script src="products/products-controller.js"></script> 
-	<script src="products/products-service.js"></script> 
-	<script src="cart/cart-service.js"></script> 
+		<script src="/node_modules/angular/angular.js"></script> 
+		<script src="/node_modules/angular-aria/angular-aria.js"></script> 
+		<script src="/node_modules/angular-animate/angular-animate.js"></script> 
+		<script src="/node_modules/angular-material/angular-material.js"></script> 
+		<script src="/node_modules/angular-route/angular-route.js"></script> 
 
 
-</head>
-<body ng-app="MyShoppingList">
-	<div ng-controller="ProductsController as productsCtrl">
-		<md-card  layout-align="space-around"  ng-repeat="product in productsCtrl.products">
-			<div layout="row">
-				 <div layout="column" flex="15">{{product.id}}</div>
-				 <div layout="column" flex="15">{{product.description}}</div>
-				 <div layout="column" flex="15">{{product.price}}</div>
-				 <div layout="column" flex="20">
-				 	<md-input-container>
-				 		<label>Quantity</label>
-				 		<md-select ng-model="product.quantity">
-				 		<md-option ng-repeat="quantity in productsCtrl.quantities" value="{{quantity}}">{{quantity}}</md-option>
-				 	</md-input-container>	
-				 </div>
-				 <div layout="column" flex="20">
-				 <mb-button ng-click="productsCtrl.addToCart(product)" type="submit"> Add to Cart </div>
-			</div>
-		<md-card>
-	</div>
-</body>
+		<script src="/app.js"></script> 
+		<script src="/products/products-controller.js"></script> 
+		<script src="/products/products-service.js"></script> 
+		<script src="/cart/cart-controller.js"></script> 
+		<script src="/cart/cart-service.js"></script> 
+
+
+	</head>
+	<body>
+		<div ng-view></div>
+
+	</body>
 </html>
