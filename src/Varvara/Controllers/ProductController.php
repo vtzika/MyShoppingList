@@ -16,6 +16,16 @@ class ProductController
 				'id' => 2,
 				'description' => 'Product B',
 				'price' => '1.3'
+			],
+			[
+				'id' => 3,
+				'description' => 'Product C',
+				'price' => '9.4'
+			],
+			[
+				'id' => 4,
+				'description' => 'Product D',
+				'price' => '2.3'
 			]
 		];
 	}
