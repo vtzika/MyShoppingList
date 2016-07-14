@@ -11,6 +11,8 @@ if (php_sapi_name() === 'cli-server' && is_file($filename)) {
 }
 
 use Varvara\Controllers\ProductController;
+use Varvara\Controllers\CartController;
+
 
 $app = new Silex\Application();
 
@@ -21,7 +23,7 @@ $app->get('/api/products', function () use ($app) {
 });
 
 $app->get('/api/carts/{id}', function ($id) use ($app) {
-  return 'Your Cart!!!';
+	return $app->json(CartController::getProductsForCart($id));
 });
 
 $app->post('/api/carts/{id}', function ($id) use ($app) {
