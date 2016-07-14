@@ -2,9 +2,9 @@
 
 namespace Varvara\Controllers;
 
-class TaskController
+class CartController
 {
-	public static function getProductsForCart(id)
+	public static function getProductsForCart($id)
 	{
 		return [
 			[
