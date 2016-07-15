@@ -12,6 +12,7 @@ To install front end dependencies: npm install from the web directory
 ## TODO
 * serialize the Product and Cart controllers responses
 * Unitests on the two Controllers
+* Refactor to remove duplication on front end by creating directives 
 * Exposing proper status codes on the allready implemented API resources
 * Swagger for API documentation
 * Implement all the functionality for posting products on the cart
