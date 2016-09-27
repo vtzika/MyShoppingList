@@ -1,6 +1,6 @@
 # MyShopingList
 
-
+ <img src='http://bettercodehub.com/edge/badge/vtzika/MyShoppingList'>
 
 ## Back end
 To install backend dependencies: composer install
