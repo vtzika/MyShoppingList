@@ -1,6 +1,6 @@
 # MyShopingList
 
- <img src='http://bettercodehub.com/edge/badge/vtzika/MyShoppingList'>
+[![BCH compliancy](http://bettercodehub.com/edge/badge/vtzika/MyShoppingList)](https://bettercodehub.com)
 
 ## Back end
 To install backend dependencies: composer install
